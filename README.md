@@ -12,10 +12,11 @@ README と Agent Skill 本体は分離しています。
 coderabbit-review-setup/
 ├── README.md
 └── SKILLS/
-    └── SKILL.md
+    └── coderabbit-review-setup/
+        └── SKILL.md
 ```
 
-Agent Skills として利用する本体は [`SKILLS/SKILL.md`](./SKILLS/SKILL.md) です。
+Agent Skills として利用する本体は [`SKILLS/coderabbit-review-setup/SKILL.md`](./SKILLS/coderabbit-review-setup/SKILL.md) です。
 
 ## 扱う内容
 
@@ -42,7 +43,7 @@ Agent Skills として利用する本体は [`SKILLS/SKILL.md`](./SKILLS/SKILL.m
 
 ## 使い方
 
-`SKILLS` ディレクトリ内の `SKILL.md` を、利用している Agent Skills 対応エージェントの skill として利用してください。
+`SKILLS/coderabbit-review-setup` ディレクトリを、そのまま Agent Skills 対応エージェントの skills ディレクトリへ配置して利用してください。
 
 例えばエージェントに次のように依頼します。
 
@@ -67,7 +68,7 @@ CodeRabbit を単なる formatting bot にせず、**正しさ・セキュリテ
 
 ## 公式ドキュメント
 
-詳細と参照URLは [`SKILLS/SKILL.md`](./SKILLS/SKILL.md) にまとめています。
+詳細と参照URLは [`SKILLS/coderabbit-review-setup/SKILL.md`](./SKILLS/coderabbit-review-setup/SKILL.md) にまとめています。
 
 ---
 
