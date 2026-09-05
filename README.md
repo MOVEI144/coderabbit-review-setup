@@ -6,13 +6,16 @@ CodeRabbit を任意のリポジトリへ導入・調整するための **Agent 
 
 ## 構成
 
+README と Agent Skill 本体は分離しています。
+
 ```text
 coderabbit-review-setup/
 ├── README.md
-└── SKILL.md
+└── SKILLS/
+    └── SKILL.md
 ```
 
-`SKILL.md` 単体で動くシンプルな Agent Skill です。
+Agent Skills として利用する本体は [`SKILLS/SKILL.md`](./SKILLS/SKILL.md) です。
 
 ## 扱う内容
 
@@ -39,20 +42,18 @@ coderabbit-review-setup/
 
 ## 使い方
 
-このリポジトリの `SKILL.md` を、利用している Agent Skills 対応エージェントの skill ディレクトリへ配置してください。配置先は利用するエージェントによって異なります。
+`SKILLS` ディレクトリ内の `SKILL.md` を、利用している Agent Skills 対応エージェントの skill として利用してください。
 
-その後、例えば次のように依頼します。
+例えばエージェントに次のように依頼します。
 
 ```text
 このリポジトリにCodeRabbitを導入して。
 レビュー方針もこのrepoに合うように考えて.coderabbit.yamlを作って。
 ```
 
-エージェントはこのSkillを参照し、必要以上に設定を増やさず、そのリポジトリに合う `.coderabbit.yaml` を作成・更新する想定です。
+エージェントはSkillを参照し、必要以上に設定を増やさず、そのリポジトリに合う `.coderabbit.yaml` を作成・更新する想定です。
 
 ## 考え方
-
-このSkillでは、次を別のものとして扱います。
 
 | 要素 | 役割 |
 |---|---|
@@ -66,20 +67,7 @@ CodeRabbit を単なる formatting bot にせず、**正しさ・セキュリテ
 
 ## 公式ドキュメント
 
-- Configuration Reference: https://docs.coderabbit.ai/reference/configuration
-- YAML Configuration: https://docs.coderabbit.ai/getting-started/yaml-configuration
-- Pull Request Review Overview: https://docs.coderabbit.ai/guides/code-review-overview
-- Review Commands: https://docs.coderabbit.ai/reference/review-commands
-- Automatic Review Controls: https://docs.coderabbit.ai/configuration/auto-review
-- Path Instructions: https://docs.coderabbit.ai/configuration/path-instructions
-- Request Changes Workflow: https://docs.coderabbit.ai/pr-reviews/request-changes-workflow
-- Pre-Merge Checks: https://docs.coderabbit.ai/pr-reviews/pre-merge-checks
-- Third-party Tools: https://docs.coderabbit.ai/tools
-- Plans: https://docs.coderabbit.ai/management/plans
-
-## 更新時の注意
-
-CodeRabbit の schema、plan、rate limit、利用可能な機能は変わる可能性があります。正確な設定キーや制限が重要な場合は、Skill 内に記載した公式ドキュメントを現在時点で確認してください。
+詳細と参照URLは [`SKILLS/SKILL.md`](./SKILLS/SKILL.md) にまとめています。
 
 ---
 
